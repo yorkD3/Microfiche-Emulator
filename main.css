@@ -1,0 +1,143 @@
+body {
+    overflow: hidden;
+    margin: 0;
+  }
+
+
+
+#screen{
+    left: 71px;
+    top: 58px;
+    width: 560px;
+    height: 500px;
+    z-index: 1;
+}
+#trex{
+    max-height: 788px;
+    max-width: 725px;
+    min-width: 725px;
+    min-height: 788px;
+    z-index: 5;
+    position: absolute;
+}
+
+
+area{
+    cursor: pointer;
+}
+
+.fiche-map{
+    position: absolute;
+    z-index: 5;
+}
+
+/* Scrollable fiche-container  */
+#fiche-container{
+  width: 560px;
+  height: 500px;
+  z-index: 6;
+  background-color: black;
+  position: absolute;
+  left: 71px;
+  top: 58px;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 5px black solid;
+  align-items: center;
+}
+
+.cardzm-1 .card .cardzm1 .cardzm2 {
+  background-color: black;
+}
+
+.cardzm-1{
+  width: 100px;
+  height: 130px;
+  cursor: pointer;
+}
+
+.card{
+    width: 200px;
+    height: 260px;
+    cursor: pointer;
+}
+
+.cardzm1{
+  width: 400px;
+  height: 520px;
+  cursor: pointer;
+}
+
+.cardzm2{
+  width: 600px;
+  height: 780px;
+  cursor: pointer;
+}
+
+
+.scan{
+  width: inherit;
+  height: inherit;
+  justify-self:center;
+  pointer-events: none;
+  background-color: black;
+  /* margin:0px; */
+  padding:1px;
+  border:none !important;
+  /* border: 2px black solid; */
+}
+
+
+#zoomCount{
+    display: none;
+}
+
+/* 
+#cards-container{
+margin-left: auto;
+margin-right: auto;
+
+display: grid;
+grid-template-columns: repeat(3, .5fr);
+grid-auto-rows:auto;
+
+} */
+
+  
+  /* .grid-container {
+    user-select: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+  }
+  
+  .grid-container:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+  }
+  
+  .card img {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    top: 0;
+    left: 0;
+  }
+  
+  .card {
+    transition: opacity 0.5s;
+    opacity: 1;
+    overflow: hidden;
+    position: absolute;
+    width: 256px;
+    height: 171px;
+  }
+  
+  .card.hidden {
+    opacity: 0;
+  } */

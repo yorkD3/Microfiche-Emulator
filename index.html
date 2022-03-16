@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <base target="_blank"/>
+    <title>Microfiche Emulator</title>
+    <link rel="stylesheet" href="main.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <style>
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    
+    <img id="trex" src="Trex-outline.png" alt="Microfiche Reader Screen" usemap="#fiche-map">
+    
+    <!-- Image Map -->
+    <map name="fiche-map">
+        <!-- <area title="Rotate" alt="Rotate" onclick="Popup('')" coords="517,751,25" shape="circle"> -->
+        <!-- <area title="Print" alt="Print" onclick="Popup('Printing')" coords="620,693,544,658" shape="rect"> -->
+        <area title="ZoomIn" alt="Zoom In" onclick="zoomIn()" coords="378,705,377,740,344,727,344,706" shape="poly">
+        <area title="ZoomOut" alt="Zoom Out" onclick="zoomOut()" coords="379,740,414,724,414,707,381,707" shape="poly">
+    </map>
+
+    <!-- Click counters -->
+    <p id="zoomCount">0</p>
+
+    <div id="screen">
+        <!-- Div for fiche -->
+        <div id="fiche-container"></div>
+    </div>
+        
+    <!-- Trex-Image -->
+    <script src="fiche.js"></script>
+    <!-- Responsive Image maps -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="jQuery-rwdImageMaps/jquery.rwdImageMaps.js"></script>
+    <script>
+        $(document).ready(function(e) {
+            $('img[usemap]').rwdImageMaps();
+            
+        });
+    </script>
+    <script>createCards2();</script>
+    
+</body>
+</html>
+
+<!-- Fiche is an image map within a div -->
+<!-- Scrolling vertically/horizontally -->
+<!-- Zooming is limited -->
+<!-- Rotate images available? -->
